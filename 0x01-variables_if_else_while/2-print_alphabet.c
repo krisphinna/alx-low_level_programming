@@ -9,8 +9,8 @@ int main(void)
 {
 	char low_case;
 
-	for (low_case = 'a'; low_case <= 'z'; low_case++)
-		putchar(low_case);
-	
-		return (0);
+	while (low_case = 'a' && <= 'z')
+		putchar(low_case++);
+	purchar('\n');
+	return (0);
 }
