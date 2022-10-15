@@ -7,10 +7,14 @@
  */
 int main(void)
 {
-	char low_case;
+	int a = 97;
 
-	while (low_case = 'a' && <= 'z')
-		putchar(low_case++);
-	purchar('\n');
+	while (a < 123)
+	{
+		putchar(a);
+		a++;
+	}
+	putchar(10);
+
 	return (0);
 }
