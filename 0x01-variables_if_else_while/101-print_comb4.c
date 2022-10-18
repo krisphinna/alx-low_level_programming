@@ -1,6 +1,9 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
+ *
+ * Description: Print possible comb of diff three digit
  *
  * Return: Always 0 (Success)
  */
@@ -8,11 +11,9 @@ int main(void)
 {
 	int x, y, z;
 
-
 	x = 48;
 	y = 48;
 	z = 48;
-
 	while (x < 58)
 	{
 		y = x + 1;
@@ -34,7 +35,6 @@ int main(void)
 			y++;
 		}
 		x++;
-
 	}
 	putchar(10);
 
