@@ -10,21 +10,20 @@
 
 int main(void)
 {
-	int count;
-	int check;
-	int alert;
+	int contador;
+	int checksum;
+	int aleatorio;
 
 	srand(time(NULL));
-	check = 2772;
-	count = 0;
+	checksum = 2772;
+	contador = 0;
 
-	while (check > 122)
+	while (checksum > 122)
 	{
-		alert = (rand() % 100);
-		printf("%c", alert);
-		check -= alert;
-		count++;
+		aleatorio = (rand() % 100);
+		printf("%c", aleatorio);
+		checksum -= aleatorio;
 	}
-	printf("%c", check);
+	printf("%c\n", checksum);
 	return (0);
 }
