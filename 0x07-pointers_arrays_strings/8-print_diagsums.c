@@ -11,15 +11,15 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i = 0;
-	int max = size * size;
-	int sum1 = 0;
-	int sum2 = 0;
+	int i;
+	int max = (size * size) - 1;
+	unsigned int sum1 = 0;
+	unsigned int sum2 = 0;
 
-	for (; i < max; i += size - 1)
-		sum1 += a[i];
+	for (i = 0; i <= max; i = i + (size + 1))
+		sum1 = sum1 + a[i];
 
-	for (i = size - 1; i < max - 1; i += size - 1)
-		sum2 += a[i];
+	for (i = (size - 1); i < max; i = i + (size - 1))
+		sum2 = sum2 + a[i];
 	printf("%d, %d\n", sum1, sum2);
 }
