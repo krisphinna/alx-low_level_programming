@@ -53,7 +53,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	new_node->key = key_dup;
 	new_node->value = value_dup;
 	new_node->next = NULL;
-index = key_index((unsigned char *)key, ht->size);
+	index = key_index((unsigned char *)key, ht->size);
 	if ((ht->array)[index] != NULL)
 	{
 		tmp_node = (ht->array)[index];
@@ -67,8 +67,7 @@ index = key_index((unsigned char *)key, ht->size);
 				free(new_node);
 				return (1);
 			}
-
-		tmp_node = tmp_node->next;
+			tmp_node = tmp_node->next;
 		}
 		tmp_node = (ht->array)[index];
 		new_node->next = tmp_node;
@@ -95,7 +94,6 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 		return (NULL);
 	else if (strlen(key) == 0)
 		return (NULL);
-
 
 	index = key_index((unsigned char *)key, ht->size);
 	if ((ht->array)[index] == NULL)
@@ -150,7 +148,7 @@ void shash_table_print(const shash_table_t *ht)
 /**
  * shash_table_delete - A function that frees a hash table.
  * @ht: The pointer to hash table to delete.
- *Return: Nothing.
+ * Return: Nothing.
  */
 void shash_table_delete(shash_table_t *ht)
 {
@@ -177,7 +175,7 @@ void shash_table_delete(shash_table_t *ht)
 					free(node);
 					node = next_node;
 				}
-		}
+			}
 		}
 		free(ht->array);
 	}
